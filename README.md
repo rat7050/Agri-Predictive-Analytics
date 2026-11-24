@@ -1,95 +1,79 @@
-# 🌱 Agri Predictive Analytics Model
+# 🌾 Agri Predictive Analytics
 
-### Crop Yield Prediction Using Machine Learning
+A Machine Learning project that predicts crop yield using agricultural and weather-related data.
 
-## 📌 About the Project
+The main idea of this project is to understand how factors like rainfall, temperature, soil nutrients, irrigation, and previous crop yield can affect agricultural production.
 
-Agri Predictive Analytics is a machine learning project that predicts crop yield based on historical agricultural data and current season conditions.
+## 🚀 Live Preview
 
-The main aim of this project is to understand how different factors like rainfall, temperature, soil nitrogen, irrigation and previous crop yield affect agricultural production.
+Try the project here:
 
-This project focuses on the Vidarbha region of Maharashtra, India. It provides a crop yield forecast approximately 6 weeks before harvest.
+**[🌐 Open Agri Predict – Live Application](https://agri-predictive-analytics-m9efdzulyamnkeew7tzdwn.streamlit.app/)**
 
-I built this project as part of my learning and internship work to understand how machine learning can be used to solve real-world agricultural problems.
+## 📌 Project Overview
+
+Agri Predictive Analytics is a crop yield prediction project developed using Python and Machine Learning.
+
+The application predicts crop yield around 6 weeks before harvest. Users can select a crop and district, enter agricultural conditions, and get an estimated yield prediction.
+
+The project focuses on the Vidarbha region of Maharashtra.
 
 ## 🎯 Project Objectives
 
-- Predict upcoming crop yield using Machine Learning.
-- Analyze historical crop yield patterns.
-- Understand the impact of weather and soil conditions.
-- Identify potential crop yield shortfall risks.
-- Present prediction results through an interactive dashboard.
+- Predict crop yield using Machine Learning.
+- Understand the impact of weather conditions on crop production.
+- Analyze historical crop yield.
+- Identify possible crop yield shortfall risks.
+- Present prediction results through an interactive Streamlit application.
 
-## ⚙️ Technologies Used
+## ✨ Features
+
+- Crop and district selection.
+- Crop yield prediction.
+- Historical yield comparison.
+- Rainfall and temperature-based analysis.
+- Irrigation and soil condition inputs.
+- Crop yield shortfall risk alert.
+- Interactive charts for better understanding.
+- Download prediction results as a CSV file.
+
+## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
 | Python | Main programming language |
-| Pandas | Data processing |
-| NumPy | Numerical operations |
+| Pandas | Data handling and analysis |
+| NumPy | Numerical calculations |
 | Scikit-learn | Machine Learning |
-| Streamlit | Interactive dashboard |
-| Plotly | Data visualization |
-| Joblib | Saving and loading the trained model |
-| Jupyter Notebook | Data analysis and experimentation |
+| Joblib | Model loading |
+| Matplotlib | Data visualization |
+| Streamlit | Web application |
+| Jupyter Notebook | Model development and experimentation |
 
-## 📊 Project Features
+## 📊 Input Features
 
-**1. Crop Yield Prediction**
+The application uses the following inputs for prediction:
 
-Predicts crop yield using historical yield records and current agricultural conditions.
-
-**2. Multiple Crop & District Selection**
-
-Users can select available crops and districts from the dashboard.
-
-**3. Weather Analysis**
-
-Considers rainfall, dry spells and high-temperature conditions.
-
-**4. Soil & Irrigation Factors**
-
-Uses soil nitrogen levels and irrigated area as prediction inputs.
-
-**5. Shortfall Risk Detection**
-
-Provides a shortfall warning when the model identifies a potential yield risk.
-
-**6. Interactive Dashboard**
-
-Built using Streamlit with different sections for overview, crop forecasting and model information.
-
-**7. Forecast Visualization**
-
-Compares historical crop yield with predicted yield using interactive charts.
-
-**8. Download Forecast Report**
-
-Allows users to download prediction results in CSV format.
-
-## 🔍 Input Features
-
-The model uses the following information:
-
-- Crop Name
+- Crop
 - District
-- Previous Three Seasons' Yield
-- Rainfall Compared to Normal
-- Longest Dry Spell
-- Weeks Above 36°C
-- Irrigated Area Share
-- Soil Nitrogen Level
-- Mandi Price Change
+- Previous three seasons' crop yield
+- Rainfall compared to normal rainfall
+- Maximum dry spell duration
+- Number of weeks with temperature above 36°C
+- Irrigated area share
+- Soil nitrogen level
+- Mandi price change
 
-## 📈 Prediction Output
+## 📈 Prediction Results
 
-The dashboard provides:
+After entering the required details, the application displays:
 
-- Predicted Crop Yield (Quintals per Hectare)
-- Historical Average Yield
-- Yield Difference
-- Potential Shortfall Risk
-- Historical vs Predicted Yield Chart
+- Predicted crop yield.
+- Historical average yield.
+- Difference between predicted and average yield.
+- Crop shortfall risk alert.
+- Historical vs predicted yield chart.
+- CSV download option.
 
 ## 📁 Project Structure
 
@@ -97,54 +81,54 @@ The dashboard provides:
 Agri-Predictive-Analytics/
 │
 ├── dataset/
+│   └── Dataset files
 │
 ├── models/
 │   └── best_model.pkl
 │
 ├── notebooks/
+│   └── Jupyter notebooks
 │
 ├── app.py
-│
 ├── requirements.txt
-│
 └── README.md
 ```
 
-## 🚀 How to Run the Project
+## ⚙️ How to Run the Project Locally
 
-Follow these steps to run the project on your local machine.
-
-**Step 1: Clone the Repository**
+**Step 1: Clone the repository**
 
 ```bash
 git clone https://github.com/rat7050/Agri-Predictive-Analytics.git
 ```
 
-**Step 2: Open the Project Folder**
+**Step 2: Open the project folder**
 
 ```bash
 cd Agri-Predictive-Analytics
 ```
 
-**Step 3: Create a Virtual Environment (Recommended)**
+**Step 3: Create a virtual environment**
 
 ```bash
 python -m venv venv
 ```
 
-Activate it on Windows:
+**Step 4: Activate the environment**
+
+For Windows:
 
 ```bash
 venv\Scripts\activate
 ```
 
-**Step 4: Install Required Libraries**
+**Step 5: Install required libraries**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**Step 5: Run the Streamlit Application**
+**Step 6: Run the Streamlit application**
 
 ```bash
 streamlit run app.py
@@ -154,21 +138,21 @@ The application will open in your browser.
 
 ## ⚠️ Important Note
 
-This project currently uses synthetic Vidarbha-style agricultural data for model development and experimentation.
+This project currently uses synthetic, Vidarbha-style agricultural data for learning and demonstration purposes.
 
-The predictions are intended for learning and demonstration purposes. They should not be treated as actual agricultural forecasts without validation using real-world agricultural data.
+The predictions are experimental and should not be used for actual farming or financial decisions without validation using reliable real-world agricultural data.
 
-## 🎓 What I Learned
+## 📚 What I Learned
 
-While working on this project, I got practical experience with:
+While working on this project, I learned:
 
-- Understanding agricultural data and its features.
-- Data preprocessing and feature engineering.
-- Working with Machine Learning models.
-- Saving and loading trained models using Joblib.
-- Connecting a trained ML model with Streamlit.
-- Creating interactive dashboards and visualizations.
-- Presenting prediction results in a user-friendly way.
+- Data preprocessing and analysis.
+- Working with agricultural datasets.
+- Understanding Machine Learning models.
+- Feature engineering.
+- Model prediction and evaluation.
+- Building interactive applications using Streamlit.
+- Presenting Machine Learning results through visualizations.
 
 ## 👨‍💻 Developed By
 
@@ -176,12 +160,13 @@ While working on this project, I got practical experience with:
 
 B.Tech – Artificial Intelligence & Data Science
 
-Interested in Machine Learning, Data Science and solving real-world problems using data.
+Sagar Institute of Research & Technology - Excellence, Bhopal
 
-- GitHub: [@rat7050](https://github.com/rat7050)
+- **GitHub:** [rat7050](https://github.com/rat7050)
+- **LinkedIn:** [Ratnesh Kumar](https://www.linkedin.com/in/ratnesh-kumar-692376338/)
 
 ---
 
-⭐ If you find this project useful, feel free to explore the repository.
+If you find this project interesting, feel free to explore the repository and try the live application.
 
-**Thanks for visiting!** 🌱
+⭐ Don't forget to give the repository a star!
