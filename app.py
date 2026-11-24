@@ -5,10 +5,7 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 
-
-# ==========================================
-# 1. PAGE CONFIGURATION
-# ==========================================
+# PAGE CONFIGURATION
 
 st.set_page_config(
     page_title="Agri Predict | Crop Intelligence",
@@ -17,10 +14,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
-# ==========================================
 # 2. LOAD ML MODEL
-# ==========================================
 
 @st.cache_resource
 def load_model():
@@ -30,10 +24,8 @@ def load_model():
 BUNDLE = load_model()
 FEATS = BUNDLE["features"]
 
-
-# ==========================================
 # 3. SESSION STATE & NAVIGATION
-# ==========================================
+
 
 if "page" not in st.session_state:
     st.session_state["page"] = "Overview"
@@ -47,9 +39,7 @@ def go_to_overview():
     st.session_state["page"] = "Overview"
 
 
-# ==========================================
 # 4. CUSTOM CSS
-# ==========================================
 
 st.markdown("""
 <style>
@@ -158,10 +148,7 @@ div[data-testid="stForm"] {
 </style>
 """, unsafe_allow_html=True)
 
-
-# ==========================================
 # 5. FORECAST FUNCTION
-# ==========================================
 
 def forecast(crop, district, lag1, lag2, lag3, **inputs):
 
@@ -196,10 +183,8 @@ def forecast(crop, district, lag1, lag2, lag3, **inputs):
 
     return ratio * baseline, baseline, alert
 
-
-# ==========================================
 # 6. SIDEBAR NAVIGATION
-# ==========================================
+
 
 with st.sidebar:
 
@@ -230,10 +215,8 @@ with st.sidebar:
     st.caption("Machine Learning Powered")
     st.caption("Agri Predict v1.0")
 
-
-# ==========================================
 # 7. OVERVIEW PAGE
-# ==========================================
+
 
 if page == "Overview":
 
@@ -316,9 +299,8 @@ if page == "Overview":
             )
 
 
-# ==========================================
 # 8. CROP FORECAST PAGE
-# ==========================================
+
 
 elif page == "Crop Forecast":
 
@@ -472,9 +454,7 @@ elif page == "Crop Forecast":
 
             st.error(f"Forecast failed: {e}")
 
-    # ======================================
     # DISPLAY PREDICTION RESULT
-    # ======================================
 
     if "forecast_result" in st.session_state:
 
@@ -606,9 +586,7 @@ elif page == "Crop Forecast":
             st.rerun()
 
 
-# ==========================================
 # 9. ABOUT MODEL PAGE
-# ==========================================
 
 elif page == "About Model":
 
@@ -674,10 +652,7 @@ elif page == "About Model":
         "observations before actual farming decisions."
     )
 
-
-# ==========================================
 # 10. FOOTER
-# ==========================================
 
 st.markdown("---")
 
